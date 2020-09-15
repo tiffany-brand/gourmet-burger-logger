@@ -1,0 +1,24 @@
+{
+  "name": "gourmet-burger-logger",
+  "version": "1.0.0",
+  "description": "The Gourmet Burger Logger tracks burgers eaten, and waiting to be eaten in an application using Node, Express, Handlebars, and MySql following the MVC design pattern.",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tiffany-brand/gourmet-burger-logger.git"
+  },
+  "author": "Tiffany Brand",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tiffany-brand/gourmet-burger-logger/issues"
+  },
+  "homepage": "https://github.com/tiffany-brand/gourmet-burger-logger#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "express-handlebars": "^5.1.0",
+    "mysql": "^2.18.1"
+  }
+}
