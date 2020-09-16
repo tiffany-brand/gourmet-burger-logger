@@ -8,7 +8,7 @@
     </div>
 
     <div class="container add-burger">
-        <h2 class="text-center">Describe your Finely Crafted Burger</h2>
+        <h2 class="text-center">Describe your Exquisitely Crafted Burger</h2>
         <form class="create-form">
             <div class="form-group">
                 <label for="burger">Burger Name:</label>
@@ -24,26 +24,41 @@
         </form>
     </div>
 
+    <div class="container burgers">
+        <div class="row pb-4">
+            <div class="col-md-6 col-sm-12">
+                <div class="col-12 burger-col m-1">
 
-    <h2>Burgers Waiting to be Devoured</h2>
+                    <h2 class="text-center burger-heading">Created Burgers</h2>
 
-    <ul>
-        {{#each burgers}}
-        {{#unless devoured}}
-        {{> burgers/burger-block devoured=true}}
-        {{/unless}}
-        {{/each}}
-    </ul>
+                    <ul class="burgers">
+                        {{#each burgers}}
+                        {{#unless devoured}}
+                        {{> burgers/burger-block devoured=true}}
+                        {{/unless}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
 
-    <h2>Devoured Burgers</h2>
+            <div class="col-md-6 col-sm-12">
+                <div class="col-12 burger-col m-1">
 
-    <ul>
-        {{#each burgers}}
-        {{#if devoured}}
-        {{> burgers/burger-block devoured=false}}
-        {{/if}}
-        {{/each}}
-    </ul>
+                    <h2 class="text-center burger-heading">Devoured Burgers</h2>
+
+                    <ul class="burgers">
+                        {{#each burgers}}
+                        {{#if devoured}}
+                        {{> burgers/burger-block devoured=false}}
+                        {{/if}}
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
 
 
 
