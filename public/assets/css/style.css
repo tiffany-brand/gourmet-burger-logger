@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
+
 body {
     background-image: url(./img/burger-bg.jpg);
     background-size: cover;
@@ -15,13 +17,15 @@ label[for="burger"] {
 }
 
 div.add-burger {
-    width: 50%;
+    width: 60%;
     background-color: gray;
     opacity: 1;
     padding: 20px;
 }
 
 div.add-burger h2 {
-    font-size: 1.5rem;
+    font-size: 2rem;
+    font-family: "Aguafina Script", serif;
+    padding-top: 20px;
 }
 
