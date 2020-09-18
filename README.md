@@ -37,6 +37,7 @@ Deployed on Heroku at:  [Gourmet Burger Logger](https://enigmatic-ravine-90918.h
 
 * [Node.js](https://nodejs.org/)
 * [Express](https://expressjs.com/)
+* [Handlebars](https://handlebarsjs.com/)
 * [MySQL](https://www.mysql.com/)
 * [Heroku](https://heroku.com)
 
