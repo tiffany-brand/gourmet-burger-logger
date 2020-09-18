@@ -10,6 +10,17 @@ router.get("/", async function (req, res) {
     res.render("index", hbsObject);
 });
 
+router.get("/api/burgers", async function (req, res) {
+    try {
+        const result = await burger.selectAll();
+        res.json({ burgers: result });
+    }
+    catch (err) {
+        console.error(err);
+        res.status(500).json(err);
+    }
+})
+
 router.post("/api/burgers", async function (req, res) {
     try {
         const result = await burger.insertOne(

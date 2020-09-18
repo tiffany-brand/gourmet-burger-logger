@@ -23,36 +23,38 @@
             </div>
         </form>
     </div>
+    <div id="burger-list">
 
-    <div class="container burgers">
-        <div class="row pb-4">
-            <div class="col-md-6 col-sm-12">
-                <div class="col-12 burger-col m-1">
+        <div class="container burgers">
+            <div class="row pb-4">
+                <div class="col-md-6 col-sm-12">
+                    <div class="col-12 burger-col m-1">
 
-                    <h2 class="text-center burger-heading">Created Burgers</h2>
+                        <h2 class="text-center burger-heading">Crafted Burgers</h2>
 
-                    <ul class="burgers">
-                        {{#each burgers}}
-                        {{#unless devoured}}
-                        {{> burgers/burger-block devoured=true}}
-                        {{/unless}}
-                        {{/each}}
-                    </ul>
+                        <ul class="burgers">
+                            {{#each burgers}}
+                            {{#unless devoured}}
+                            {{> burgers/burger-block }}
+                            {{/unless}}
+                            {{/each}}
+                        </ul>
+                    </div>
                 </div>
-            </div>
 
-            <div class="col-md-6 col-sm-12">
-                <div class="col-12 burger-col m-1">
+                <div class="col-md-6 col-sm-12">
+                    <div class="col-12 burger-col m-1">
 
-                    <h2 class="text-center burger-heading">Devoured Burgers</h2>
+                        <h2 class="text-center burger-heading">Devoured Burgers</h2>
 
-                    <ul class="burgers">
-                        {{#each burgers}}
-                        {{#if devoured}}
-                        {{> burgers/burger-block devoured=false}}
-                        {{/if}}
-                        {{/each}}
-                    </ul>
+                        <ul class="burgers">
+                            {{#each burgers}}
+                            {{#if devoured}}
+                            {{> burgers/burger-block }}
+                            {{/if}}
+                            {{/each}}
+                        </ul>
+                    </div>
                 </div>
             </div>
         </div>
