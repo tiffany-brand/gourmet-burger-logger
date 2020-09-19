@@ -1,64 +1,64 @@
 @import url('https://fonts.googleapis.com/css2?family=Aguafina+Script&display=swap');
 
 body {
-    background-image: url(./img/burger-bg.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+	background-image: url(./img/burger-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
 }
 
 div.jumbotron {
-    margin-top: -30px;
-    margin-bottom: -50px;
+	margin-top: -30px;
+	margin-bottom: -50px;
 }
 
 div.main {
-    background-color: rgba(255,255,255,0.8);
-    
-
+	background-color: rgba(255, 255, 255, 0.8);
 }
 
+/* Add burger form styling */
+
 label[for="burger"] {
-    visibility: hidden;
+	visibility: hidden;
 }
 
 div.add-burger {
-    width: 60%;
-    background-color: rgb(150, 148, 148);
-    opacity: 1;
-    padding: 20px;
-    margin-bottom: 50px;
+	width: 60%;
+	background-color: rgb(150, 148, 148);
+	opacity: 1;
+	padding: 20px;
+	margin-bottom: 50px;
 }
 
 div.add-burger h2 {
-    font-size: 2rem;
-    font-family: "Aguafina Script", serif;
-    padding-top: 20px;
+	font-size: 2rem;
+	font-family: "Aguafina Script", serif;
+	padding-top: 20px;
 }
 
+/* Burger list styling */
+
 div.burgers {
-    margin: 10px; 
+	margin: 10px;
 }
 
 div.burgers .burger-heading {
-    font-size: 2rem;
-    padding: 20px;
-    font-family: "Aguafina Script", serif;
+	font-size: 2rem;
+	padding: 20px;
+	font-family: "Aguafina Script", serif;
 }
 
 div.burger-col {
-    background-color: rgb(163, 162, 162);
-    min-height: 300px;
+	background-color: rgb(163, 162, 162);
+	min-height: 300px;
 }
 
 li.burger-li {
-    background-color: rgb(223, 221, 221);
-    list-style-type: none;
-    border-bottom: 1px solid gray;
-    
+	background-color: rgb(223, 221, 221);
+	list-style-type: none;
+	border-bottom: 1px solid gray;
 }
 
 ul.burgers {
-    margin: 0 0 20px 0;
-    padding: 0 0 20px 0;
+	margin: 0 0 20px 0;
+	padding: 0 0 20px 0;
 }
-
