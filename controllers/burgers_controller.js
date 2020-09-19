@@ -6,7 +6,6 @@ const burger = require("../models/burger.js");
 // Create all our routes and set up logic within those routes where required.
 router.get("/", async function (req, res) {
     const hbsObject = { burgers: await burger.selectAll() };
-    console.log(hbsObject);
     res.render("index", hbsObject);
 });
 
@@ -42,8 +41,6 @@ router.post("/api/burgers", async function (req, res) {
 
 router.put("/api/burgers/:id", async function (req, res) {
     const condition = "id = " + req.params.id;
-
-    console.log("condition", condition);
 
     try {
         const result = await burger.updateOne({ devoured: req.body.devoured }, condition);

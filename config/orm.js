@@ -71,7 +71,7 @@ class ORM {
         queryString += this.printQuestionMarks(vals.length);
         queryString += ");";
 
-        console.log(queryString);
+
 
         return this.query(queryString, vals);
     }
@@ -84,7 +84,7 @@ class ORM {
         queryString += " WHERE ";
         queryString += condition;
 
-        console.log(queryString);
+
         return this.query(queryString);
     }
 
