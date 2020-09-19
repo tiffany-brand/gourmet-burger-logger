@@ -14,7 +14,7 @@ $(function () {
             type: 'PUT',
             data: newDevouredState
         }).then(function () {
-            console.log('changed devoured to', newDevoured);
+
             // Reload the page to get the updated list
             location.reload();
         });
@@ -36,52 +36,24 @@ $(function () {
                 type: 'POST',
                 data: newBurger
             }).then(function () {
-                console.log('created new burger');
+
                 // Reload the page to get the updated list
                 location.reload();
             });
         }
     });
 
-<<<<<<< HEAD
-    // Send the POST request.
-    $.ajax("/api/burgers", {
-        type: "POST",
-        data: newBurger
-    }).then(
-        function () {
+    // Delete the burger when the trash button is clicked
+    $('.delete-burger').on('click', function (event) {
+        var id = $(this).data('id');
+
+        // Send the DELETE request to remove the burger from the db
+        $.ajax('/api/burgers/' + id, {
+            type: 'DELETE'
+        }).then(function () {
+
             // Reload the page to get the updated list
             location.reload();
-        }
-    );
-});
-
-$(".delete-burger").on("click", function (event) {
-    var id = $(this).data("id");
-
-    // Send the DELETE request.
-    $.ajax("/api/burgers/" + id, {
-        type: "DELETE"
-    }).then(
-        function () {
-            // Reload the page to get the updated list
-            location.reload();
-        }
-    );
-});
-=======
-	// Delete the burger when the trash button is clicked
-	$('.delete-burger').on('click', function(event) {
-		var id = $(this).data('id');
-
-		// Send the DELETE request to remove the burger from the db
-		$.ajax('/api/burgers/' + id, {
-			type: 'DELETE'
-		}).then(function() {
-			console.log('deleted burger', id);
-			// Reload the page to get the updated list
-			location.reload();
-		});
-	});
->>>>>>> 1f8a782bce62aed6915f10d97b30aa0eb45da270
+        });
+    });
 });
