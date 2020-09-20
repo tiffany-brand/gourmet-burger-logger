@@ -4,6 +4,8 @@ const router = express.Router();
 const burger = require("../models/burger.js");
 
 // Create all our routes and set up logic within those routes where required.
+
+// Get burgers
 router.get("/", async function (req, res) {
     const hbsObject = { burgers: await burger.selectAll() };
     res.render("index", hbsObject);
@@ -20,6 +22,7 @@ router.get("/api/burgers", async function (req, res) {
     }
 })
 
+// Create a new burger
 router.post("/api/burgers", async function (req, res) {
     try {
         const result = await burger.insertOne(
@@ -30,7 +33,7 @@ router.post("/api/burgers", async function (req, res) {
                 req.body.burger_name, req.body.devoured
             ]
         );
-        // Send back the ID of the new quote
+        // Send back the ID of the new burger
         res.json({ id: result.insertId });;
     }
     catch (err) {
@@ -39,6 +42,7 @@ router.post("/api/burgers", async function (req, res) {
     }
 });
 
+// Devour a burger
 router.put("/api/burgers/:id", async function (req, res) {
     const condition = "id = " + req.params.id;
 
@@ -57,6 +61,7 @@ router.put("/api/burgers/:id", async function (req, res) {
     }
 });
 
+// Delete a burger
 router.delete("/api/burgers/:id", async function (req, res) {
     const condition = "id = " + req.params.id;
 
