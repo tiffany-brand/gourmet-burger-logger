@@ -19,7 +19,7 @@ class ORM {
 			});
 		});
 	};
-	// Helper function for SQL syntax from classwork activity.
+	// Helper function for SQL syntax: code from CatsApp classwork activity.
 	// Let's say we want to pass 3 values into the mySQL query.
 	// In order to write the query, we need 3 question marks.
 	// The above helper function loops through and creates an array of question marks - ["?", "?", "?"] - and turns it into a string.
@@ -33,7 +33,7 @@ class ORM {
 		return arr.toString();
 	}
 
-	// Helper function to convert object key/value pairs to SQL syntax - code from classwork activity
+	// Helper function to convert object key/value pairs to SQL syntax - code from CatsApp classwork activity
 	objToSql(ob) {
 		const arr = [];
 
@@ -46,7 +46,7 @@ class ORM {
 				if (typeof value === 'string' && value.indexOf(' ') >= 0) {
 					value = "'" + value + "'";
 				}
-				// e.g. {name: 'Lana Del Grey'} => ["name='Lana Del Grey'"]
+				// e.g. {burger_name: 'Bacon Burger'} => ["burger_name='Bacon Burger'"]
 				// e.g. {devoured: true} => ["devoured=true"]
 				arr.push(key + '=' + value);
 			}
@@ -94,5 +94,5 @@ class ORM {
 	}
 }
 
-// Export an instance of the ORM object using the connection
+// Export an instance of the ORM object
 module.exports = new ORM(connection);
