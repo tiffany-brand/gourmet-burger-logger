@@ -9,7 +9,7 @@
 
 The Gourmet Burger Logger tracks burgers eaten, and waiting to be eaten in an application using Node, Express, Handlebars, and MySql following the MVC design pattern. A user can input a burger description into the form and add the burger. The burger then appears in the list of crafted burgers on the left section of the window. The burger can then be devoured, which moves it to the devoured burgers list on the right side of the window.  Burgers can also be deleted by clicking on the trash can button.
 
-The design of this application was based on our CatsApp MVC classwork activity with thanks to Bobby Hoffman for the promises refactor.
+The design of this application was based on our CatsApp MVC classwork activity with thanks to [Bobby Hoffman](https://github.com/rhoffman103) for the promises refactor.
 
 
 ## Table of Contents
